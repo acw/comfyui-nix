@@ -6,7 +6,7 @@
      flake-utils.url = "github:numtide/flake-utils";
      comfyuigit = {
        flake = false;
-       url = "github:comfyanonymous/ComfyUi/v0.3.50";
+       url = "github:comfyanonymous/ComfyUi/v0.3.64";
      };
   };
 
@@ -44,7 +44,7 @@
        
         packages.comfyui_frontend = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfyui-frontend-package";
-          version = "1.23.4";
+          version = "1.27.10";
           pyproject = true;
 
           src = pkgs.fetchPypi {
@@ -61,7 +61,7 @@
 
         packages.comfyui_workflow = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfyui-workflow-templates";
-          version = "0.1.59";
+          version = "0.1.94";
           pyproject = true;
 
           src = pkgs.fetchPypi {
@@ -124,13 +124,13 @@
           ]));
           in pkgs.stdenv.mkDerivation {
           pname = "ComfyUI";
-          version = "0.3.50";
+          version = "0.3.64";
           pyproject = true;
 
           src = pkgs.fetchFromGitHub {
             owner = "comfyanonymous";
             repo = "ComfyUI";
-            tag = "v0.3.50";
+            tag = "v0.3.64";
             sha256 = "sha256-vIw22ISbjUnfRB6+TFE7QKbVnEXu6BFAN8lmCGE74/M=";
           };
 

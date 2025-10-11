@@ -3,16 +3,16 @@
     "comfyuigit": {
       "flake": false,
       "locked": {
-        "lastModified": 1755071198,
-        "narHash": "sha256-vIw22ISbjUnfRB6+TFE7QKbVnEXu6BFAN8lmCGE74/M=",
+        "lastModified": 1759899223,
+        "narHash": "sha256-p0u2rZZ3AHn8InGWzu5sTTnYuYSINnDFnzuPgjqSLGw=",
         "owner": "comfyanonymous",
         "repo": "ComfyUi",
-        "rev": "d5c1954d5cd4a789bbf84d2b75a955a5a3f93de8",
+        "rev": "637221995f7424a561bd825de3e61ea117dfe1e3",
         "type": "github"
       },
       "original": {
         "owner": "comfyanonymous",
-        "ref": "v0.3.50",
+        "ref": "v0.3.64",
         "repo": "ComfyUi",
         "type": "github"
       }
