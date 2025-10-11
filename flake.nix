@@ -38,6 +38,7 @@
               av
               sqlalchemy
               soundfile
+              kornia
             ]
           ));
       in rec {
@@ -50,7 +51,7 @@
           src = pkgs.fetchPypi {
             pname = "comfyui_frontend_package";
             inherit version;
-            sha256 = "sha256-8HrnNEO5rOuUez1MEzWUOJ512nraRTfH+BRJD5PwMfg=";
+            sha256 = "sha256-KUfKv82V+kmHlNfu/Z0cTMTefDIOIqopFrJfvLm4DH4=";
           };
 
           buildInputs = [
@@ -67,7 +68,7 @@
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates";
             inherit version;
-            sha256 = "sha256-dt8IbxOzNIZi36eAjVjcoPIXwaVkLjI2VUixIoIWXBo=";
+            sha256 = "sha256-xkOm/IFRV9wsxjthlFT4aGVYki/rudDFRxCFNrobQXI=";
           };
 
           buildInputs = [
@@ -118,6 +119,7 @@
             ps.av
             ps.sqlalchemy
             ps.soundfile
+            ps.kornia
             packages.comfyui_frontend
             packages.comfyui_workflow
             packages.comfyui_embedded_docs
