@@ -4,10 +4,6 @@
   inputs = {
      nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
      flake-utils.url = "github:numtide/flake-utils";
-     comfyuigit = {
-       flake = false;
-       url = "github:comfyanonymous/ComfyUi/v0.3.64";
-     };
   };
 
   outputs = { flake-utils, nixpkgs, ... }:
@@ -45,30 +41,34 @@
        
         packages.comfyui_frontend = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfyui-frontend-package";
-          version = "1.27.10";
+          version = "1.28.7";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_frontend_package";
             inherit version;
-            sha256 = "sha256-KUfKv82V+kmHlNfu/Z0cTMTefDIOIqopFrJfvLm4DH4=";
+            sha256 = "sha256-hJ0jGxfcE9i/yAc0ZkSNWeYxgx9Z2NQQIemUUDdWGmc=";
           };
 
           buildInputs = [
             python
             python.pkgs.pip
           ];
+
+          patchPhase = ''
+            sed -i 's/or "0.1.0"/or "${version}"/' setup.py
+          '';
         };
 
         packages.comfyui_workflow = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfyui-workflow-templates";
-          version = "0.1.94";
+          version = "0.1.95";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates";
             inherit version;
-            sha256 = "sha256-xkOm/IFRV9wsxjthlFT4aGVYki/rudDFRxCFNrobQXI=";
+            sha256 = "sha256-g10FmWxv2PQzY1Ry/LaHddjdKUA7rSYtxYJz2bR+uSE=";
           };
 
           buildInputs = [
@@ -79,13 +79,13 @@
 
         packages.comfyui_embedded_docs = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfyui-embedded-docs";
-          version = "0.2.6";
+          version = "0.3.0";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_embedded_docs";
             inherit version;
-            sha256 = "sha256-ild/PuIWvo3NbAjpZYxvJX/7np6B9A8NNt6bSZJJdWo=";
+            sha256 = "sha256-pUUVY0QS98J6ChHwwyiHKJnTeVjrrqv+qfepp03OpnA=";
           };
 
           buildInputs = [
@@ -144,20 +144,19 @@
           ]));
           in pkgs.stdenv.mkDerivation {
           pname = "ComfyUI";
-          version = "0.3.64";
+          version = "0.3.65";
           pyproject = true;
 
           src = pkgs.fetchFromGitHub {
             owner = "comfyanonymous";
             repo = "ComfyUI";
-            tag = "v0.3.64";
+            tag = "v0.3.65";
             sha256 = "sha256-vIw22ISbjUnfRB6+TFE7QKbVnEXu6BFAN8lmCGE74/M=";
           };
 
           buildInputs = [
             python_extended
             python.pkgs.pip
-            packages.comfyui_frontend
           ];
 
           installPhase = ''
