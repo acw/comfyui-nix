@@ -94,6 +94,23 @@
           ];
         };
 
+        packages.spandrel = pkgs.python3Packages.buildPythonPackage rec {
+          pname = "spandrel";
+          version = "0.4.1";
+          pyproject = true;
+
+          src = pkgs.fetchPypi {
+            pname = "spandrel";
+            inherit version;
+            sha256 = "sha256-ZG2YFqlC5Z1WqrLckENTlS5X3uSyyz9Z9+pNwPsRofI=";
+          };
+
+          buildInputs = [
+            python
+            python.pkgs.pip
+          ];
+        };
+
         packages.comfyui =
           let python_extended = (python.withPackages (ps: [
             ps.alembic
@@ -123,6 +140,7 @@
             packages.comfyui_frontend
             packages.comfyui_workflow
             packages.comfyui_embedded_docs
+            packages.spandrel
           ]));
           in pkgs.stdenv.mkDerivation {
           pname = "ComfyUI";
