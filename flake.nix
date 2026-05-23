@@ -35,19 +35,22 @@
               sqlalchemy
               soundfile
               kornia
+              pyopengl
+              glfw
+              simpleeval
             ]
           ));
       in rec {
        
         packages.comfyui_frontend = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfyui-frontend-package";
-          version = "1.39.19";
+          version = "1.43.18";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_frontend_package";
             inherit version;
-            sha256 = "sha256-BLpdAQDwJlZlZ495lQOvRDs+LsV+W6/uj9wFzYhGLkU=";
+            sha256 = "sha256-z75TrKUuWPjJYwBEVZGgcC1UrEsFzqrGtc7+4FgXHlM=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -59,13 +62,13 @@
 
        packages.comfyui_workflow_core = pkgs.python3Packages.buildPythonPackage rec {
          pname = "comfyui-workflow-templates-core";
-          version = "0.3.159";
+          version = "0.3.233";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates_core";
             inherit version;
-            sha256 = "sha256-GMsbXUsCaMMZL5voHCway1t5bf4oiTOUEOPoX0iemZY=";
+            sha256 = "sha256-5XQb9tEU9Kl/F0gYz/WXRzk24zF2+C4OU0va4bowG8U=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -73,13 +76,13 @@
 
        packages.comfyui_workflow_media_api = pkgs.python3Packages.buildPythonPackage rec {
          pname = "comfyui-workflow-templates-media-api";
-          version = "0.3.59";
+          version = "0.3.76";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates_media_api";
             inherit version;
-            sha256 = "sha256-0CykAChG27GkZj5JRGqFhW7twVNyG//mPXVcVvxo3sw=";
+            sha256 = "sha256-I2al1ZJ12jraeIVgRNifFavVDlDfEZyM8RNcOWAPQ30=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -87,13 +90,13 @@
        
        packages.comfyui_workflow_media_video = pkgs.python3Packages.buildPythonPackage rec {
          pname = "comfyui-workflow-templates-media-video";
-          version = "0.3.57";
+          version = "0.3.85";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates_media_video";
             inherit version;
-            sha256 = "sha256-qs1tHUV8RelIHPkWtN1iCDlEl3tg47iSYlLQfeE6Vj4=";
+            sha256 = "sha256-E9umiQInnuzlu0W0XxZ+Ea5IfhLIRyF4XZg2fT+/ZSo=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -101,13 +104,13 @@
 
        packages.comfyui_workflow_media_image = pkgs.python3Packages.buildPythonPackage rec {
          pname = "comfyui-workflow-templates-media-image";
-          version = "0.3.98";
+          version = "0.3.139";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates_media_image";
             inherit version;
-            sha256 = "sha256-URjIPhOjMdrcpo4v9YHeTQ0KyCzbLgoOLMEO6ACeueQ=";
+            sha256 = "sha256-RTFjVGV/JyB8phHXD8r+Z27JCSKs5ybzZMHmWqO5Bjc=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -115,13 +118,13 @@
 
        packages.comfyui_workflow_media_other = pkgs.python3Packages.buildPythonPackage rec {
          pname = "comfyui-workflow-templates-media-other";
-          version = "0.3.131";
+          version = "0.3.199";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates_media_other";
             inherit version;
-            sha256 = "sha256-cpFtJf4TiIAzat2XgMKQx7P2mlmdp+hcxnyIBVUHi4g=";
+            sha256 = "sha256-HjWfx69yqED5cQEsOTYMB+zOlMU1aJbyR7BozcgygRs=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -129,13 +132,13 @@
 
         packages.comfyui_workflow = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfyui-workflow-templates";
-          version = "0.9.11";
+          version = "0.9.77";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates";
             inherit version;
-            sha256 = "sha256-bnO21Hbd/QnxtOYXcuH3GJEBivrd/m1X3m7Oz1XycCc=";
+            sha256 = "sha256-/1g0oRYi+fc+cW9hRUBk1j1oF+rwRYMMMcISuzu5x1g=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -160,13 +163,13 @@
 
         packages.comfyui_embedded_docs = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfyui-embedded-docs";
-          version = "0.4.3";
+          version = "0.5.0";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_embedded_docs";
             inherit version;
-            sha256 = "sha256-HMKr+T65Bv50bb8caScbH1ACFrCgqg1IoIQhjOtxu6w=";
+            sha256 = "sha256-kZjzRaDPqXfJ9702CaA1m66+WijwckujYqFZ5Nv9N2E=";
           };
 
           build-system = [python.pkgs.setuptools ];
@@ -174,13 +177,13 @@
 
         packages.spandrel = pkgs.python3Packages.buildPythonPackage rec {
           pname = "spandrel";
-          version = "0.4.1";
+          version = "0.4.2";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "spandrel";
             inherit version;
-            sha256 = "sha256-ZG2YFqlC5Z1WqrLckENTlS5X3uSyyz9Z9+pNwPsRofI=";
+            sha256 = "sha256-/vpOqWbGpbdyHc8k8+IGKlqWo5XIvty1cPtVlx/cvMs=";
           };
 
           build-system = [
@@ -196,7 +199,7 @@
 
         packages.comfy_kitchen = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfy-kitchen";
-          version = "0.2.7";
+          version = "0.2.8";
           format = "wheel";
 
           src = pkgs.fetchPypi {
@@ -205,13 +208,13 @@
             format = "wheel";
             dist = "py3";
             python = "py3";
-            sha256 = "sha256-+PqlebadMx0vHqwJ6WqVWGwqa5WKVLwZ5/HBp3hS3TY=";
+            sha256 = "sha256-CzIpks8Wgevj1BOseVDznlzEJVBcE8740IUnzoL+XjI=";
           };
         };
 
         packages.comfy_aimdo = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfy-aimdo";
-          version = "0.2.9";
+          version = "0.4.3";
           format = "wheel";
 
           src = pkgs.fetchPypi {
@@ -220,7 +223,7 @@
             format = "wheel";
             dist = "py3";
             python = "py3";
-            sha256 = "sha256-nJpzj8zxaRXewIh6yHd/Um526o04SD0Pzg/N327IIag=";
+            sha256 = "sha256-Kl56KOWdQCRnslodnDatuCVzZwKNjhSt54UDsr52PVo=";
           };
         };
 
@@ -251,6 +254,9 @@
             ps.soundfile
             ps.kornia
             ps.requests
+            ps.pyopengl
+            ps.glfw
+            ps.simpleeval
             packages.comfyui_workflow_core
             packages.comfyui_workflow_media_api
             packages.comfyui_workflow_media_video
@@ -265,17 +271,25 @@
           ]));
           in pkgs.stdenv.mkDerivation {
           pname = "ComfyUI";
-          version = "0.16.4";
+          version = "0.21.1";
 
           src = pkgs.fetchFromGitHub {
             owner = "Comfy-Org";
             repo = "ComfyUI";
-            tag = "v0.16.4";
-            sha256 = "sha256-wPPsXQytzpb7gSzE4dUT5JME/q03Z2g6pk9RidHNy8A=";
+            tag = "v0.21.1";
+            sha256 = "sha256-cRhIZ8TfCDUWKdMPYSz7xwDKpQnaoxl1mC/snRg8xKE=";
           };
 
           buildInputs = [
             python_extended
+            pkgs.libGL
+            pkgs.libGLU
+            pkgs.mesa
+            pkgs.glfw
+          ];
+
+          nativeBuildInputs = [
+            pkgs.makeWrapper
           ];
 
           installPhase = ''
@@ -283,10 +297,15 @@
             cp -r --no-preserve=mode,ownership $src/* $out
             chmod -R u+w $out
 
-            echo "#!/bin/sh" > $out/bin/ComfyUI
-            echo "export MALLOC=system" >> $out/bin/ComfyUI
-            echo "exec ${python_extended}/bin/python $out/main.py \"\$@\"" >> $out/bin/ComfyUI
-            chmod +x $out/bin/ComfyUI
+            makeWrapper ${python_extended}/bin/python $out/bin/ComfyUI \
+              --add-flags "$out/main.py" \
+              --set MALLOC system \
+              --prefix LD_LIBRARY_PATH : ${pkgs.lib.makeLibraryPath [
+                pkgs.libGL
+                pkgs.libGLU
+                pkgs.mesa
+                pkgs.glfw
+              ]}
           '';
         };
       }
