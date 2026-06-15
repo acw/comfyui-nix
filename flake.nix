@@ -44,13 +44,13 @@
        
         packages.comfyui_frontend = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfyui-frontend-package";
-          version = "1.43.18";
+          version = "1.45.15";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_frontend_package";
             inherit version;
-            sha256 = "sha256-z75TrKUuWPjJYwBEVZGgcC1UrEsFzqrGtc7+4FgXHlM=";
+            sha256 = "sha256-Me7c0kgW+uVECyyWcgX5u9yJRxstk14F37yB3QrSdWQ=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -62,13 +62,13 @@
 
        packages.comfyui_workflow_core = pkgs.python3Packages.buildPythonPackage rec {
          pname = "comfyui-workflow-templates-core";
-          version = "0.3.233";
+          version = "0.3.252";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates_core";
             inherit version;
-            sha256 = "sha256-5XQb9tEU9Kl/F0gYz/WXRzk24zF2+C4OU0va4bowG8U=";
+            sha256 = "sha256-+0qfArlhI7fInoMMAxykkPWQEk44/t8Jep7k0NTf3hY=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -76,13 +76,13 @@
 
        packages.comfyui_workflow_media_api = pkgs.python3Packages.buildPythonPackage rec {
          pname = "comfyui-workflow-templates-media-api";
-          version = "0.3.76";
+          version = "0.3.80";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates_media_api";
             inherit version;
-            sha256 = "sha256-I2al1ZJ12jraeIVgRNifFavVDlDfEZyM8RNcOWAPQ30=";
+            sha256 = "sha256-8ky96qyePUC/WHqmADciOOvMHoj70D50iCiIigzplvo=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -90,13 +90,13 @@
        
        packages.comfyui_workflow_media_video = pkgs.python3Packages.buildPythonPackage rec {
          pname = "comfyui-workflow-templates-media-video";
-          version = "0.3.85";
+          version = "0.3.91";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates_media_video";
             inherit version;
-            sha256 = "sha256-E9umiQInnuzlu0W0XxZ+Ea5IfhLIRyF4XZg2fT+/ZSo=";
+            sha256 = "sha256-sv5boLqFrRxp33kN7xpFC6/YLTNaaPJYy9xn/H0Y9eo=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -104,13 +104,13 @@
 
        packages.comfyui_workflow_media_image = pkgs.python3Packages.buildPythonPackage rec {
          pname = "comfyui-workflow-templates-media-image";
-          version = "0.3.139";
+          version = "0.3.150";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates_media_image";
             inherit version;
-            sha256 = "sha256-RTFjVGV/JyB8phHXD8r+Z27JCSKs5ybzZMHmWqO5Bjc=";
+            sha256 = "sha256-ysh+E245FKY65e3H1HtrlRqOyH5d1h2GGhH+SrJ3Gcc=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -118,13 +118,13 @@
 
        packages.comfyui_workflow_media_other = pkgs.python3Packages.buildPythonPackage rec {
          pname = "comfyui-workflow-templates-media-other";
-          version = "0.3.199";
+          version = "0.3.217";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates_media_other";
             inherit version;
-            sha256 = "sha256-HjWfx69yqED5cQEsOTYMB+zOlMU1aJbyR7BozcgygRs=";
+            sha256 = "sha256-Z1t3WHFcBFvd753v3du6nH79dxFFUSYdJv30nwQzxpc=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -132,13 +132,13 @@
 
         packages.comfyui_workflow = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfyui-workflow-templates";
-          version = "0.9.77";
+          version = "0.9.98";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_workflow_templates";
             inherit version;
-            sha256 = "sha256-/1g0oRYi+fc+cW9hRUBk1j1oF+rwRYMMMcISuzu5x1g=";
+            sha256 = "sha256-uCb0E0V3CVdmDwKSEMmYZsGNkmsP1cB9Cupb7uwxvQI=";
           };
 
           build-system = [ python.pkgs.setuptools ];
@@ -163,13 +163,13 @@
 
         packages.comfyui_embedded_docs = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfyui-embedded-docs";
-          version = "0.5.0";
+          version = "0.5.3";
           pyproject = true;
 
           src = pkgs.fetchPypi {
             pname = "comfyui_embedded_docs";
             inherit version;
-            sha256 = "sha256-kZjzRaDPqXfJ9702CaA1m66+WijwckujYqFZ5Nv9N2E=";
+            sha256 = "sha256-Sf7LVwOL2+Pfs8D3e0tpW1+xMes24IjKPquQ2eGD/b8=";
           };
 
           build-system = [python.pkgs.setuptools ];
@@ -199,7 +199,7 @@
 
         packages.comfy_kitchen = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfy-kitchen";
-          version = "0.2.8";
+          version = "0.2.10";
           format = "wheel";
 
           src = pkgs.fetchPypi {
@@ -208,13 +208,13 @@
             format = "wheel";
             dist = "py3";
             python = "py3";
-            sha256 = "sha256-CzIpks8Wgevj1BOseVDznlzEJVBcE8740IUnzoL+XjI=";
+            sha256 = "sha256-wkKv0Y0SDij8lJxCP6KMuyLLTXDWJ9jMfN9rrVTdJyw=";
           };
         };
 
         packages.comfy_aimdo = pkgs.python3Packages.buildPythonPackage rec {
           pname = "comfy-aimdo";
-          version = "0.4.3";
+          version = "0.4.9";
           format = "wheel";
 
           src = pkgs.fetchPypi {
@@ -223,7 +223,7 @@
             format = "wheel";
             dist = "py3";
             python = "py3";
-            sha256 = "sha256-Kl56KOWdQCRnslodnDatuCVzZwKNjhSt54UDsr52PVo=";
+            sha256 = "sha256-qCF8CXnW5AJU/civJnCxjZxOmfPFRp7wmv8UbDaD7y8=";
           };
         };
 
@@ -271,13 +271,13 @@
           ]));
           in pkgs.stdenv.mkDerivation {
           pname = "ComfyUI";
-          version = "0.21.1";
+          version = "0.24.0";
 
           src = pkgs.fetchFromGitHub {
             owner = "Comfy-Org";
             repo = "ComfyUI";
-            tag = "v0.21.1";
-            sha256 = "sha256-cRhIZ8TfCDUWKdMPYSz7xwDKpQnaoxl1mC/snRg8xKE=";
+            tag = "v0.24.0";
+            sha256 = "sha256-43yi0Pgx+UKQDNnXQSw3TtCc2pA8arfFrI2hFN6MlZg=";
           };
 
           buildInputs = [
