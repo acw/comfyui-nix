@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# A version bump only changes a few lines, but the build is heavy; don't let
+# a stale run for an outdated commit hog the runner.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: nixos
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      # Evaluation sanity: every output evaluates and the flake is well-formed.
+      - run: nix flake check
+      # Actually build the package. This is what catches a wrong src sha256
+      # after a version bump, which `nix flake check` alone does not.
+      - run: nix build .#comfyui --print-build-logs
